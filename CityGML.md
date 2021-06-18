@@ -5,4 +5,13 @@ https://www.geospatial.jp/ckan/dataset/plateau
   - 都区部北西
 - 東京23区拡大図2
 # gpkgに変換
+```
+QgsVectorFileWriter.writeAsVectorFormat(original_gml, gpkg_file, "UTF-8")
+```
 # XY座標をスワップ
+```
+processing.run(
+	"native:swapxy", {
+  "INPUT":gpkg_file,
+  "OUTPUT":"memory:"})["OUTPUT"]
+```
