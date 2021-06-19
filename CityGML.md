@@ -1,6 +1,5 @@
 # CityGMLファイルのダウンロード
-- g空間情報<br/>
-https://www.geospatial.jp/ckan/dataset/plateau
+- g空間情報 https://www.geospatial.jp/ckan/dataset/plateau
 - <a href="https://www.geospatial.jp/ckan/dataset/plateau-tokyo23ku-citygml-2020/resource/40f54174-7c7d-4f9f-b392-8c8ad585b09b" target="_blank">東京23区拡大図1</a>
   - 都区部北西
 - 東京23区拡大図2
