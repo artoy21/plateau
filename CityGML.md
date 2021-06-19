@@ -12,8 +12,8 @@ QgsVectorFileWriter.writeAsVectorFormat(original_gml, gpkg_file, "UTF-8")
 ```
 processing.run(
 	"native:swapxy", {
-  "INPUT":gpkg_file,
-  "OUTPUT":"memory:"})["OUTPUT"]
+	"INPUT":gpkg_file,
+	"OUTPUT":"memory:"})["OUTPUT"]
 ```
 
 # 想定最大浸水深のフィールドを追加
@@ -34,3 +34,6 @@ with edit(layer):
 		ft['INUNDATION_MAX'] = inund_max
 		layer.updateFeature(ft)
 ```
+- 想定最大浸水深÷建物の高さで色分け
+	- 緑（<1％）～赤（>30％）
+<img src="https://user-images.githubusercontent.com/34636490/122630113-8a909800-d0fc-11eb-84d1-b692ef25a313.png" width=600/>
