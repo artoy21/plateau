@@ -4,6 +4,7 @@
   - 都区部北西
 - 東京23区拡大図2
 # gpkgに変換
+- gmlのままやメモリ上で処理すると、次のXYスワップがうまくいかない。。。
 ```
 QgsVectorFileWriter.writeAsVectorFormat(original_gml, gpkg_file, "UTF-8")
 ```
