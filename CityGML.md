@@ -21,16 +21,16 @@ processing.run(
 with edit(layer):
 	layer.addAttribute(QgsField('INUNDATION_MAX', QVariant.Double, 'double'))
 	layer.updateFields()
-for ft in layer.getFeatures():
-	if str(ft.attribute('規模')).find("L2") < 0:
-		inund_max = 0
-	else:
-		x = ft.attribute('value')
-		if x[1]=="1":
-			m = re.search(r"1:([0-9.]+)", x)
+	for ft in layer.getFeatures():
+		if str(ft.attribute('規模')).find("L2") < 0:
+			inund_max = 0
 		else:
-			m = re.search(r":[^,]+,([0-9.]+)", x)
-		inund_max = float(m.group(1))
-	ft['INUNDATION_MAX'] = inund_max
-	layer.updateFeature(ft)
+			x = ft.attribute('value')
+			if x[1]=="1":
+				m = re.search(r"1:([0-9.]+)", x)
+			else:
+				m = re.search(r":[^,]+,([0-9.]+)", x)
+			inund_max = float(m.group(1))
+		ft['INUNDATION_MAX'] = inund_max
+		layer.updateFeature(ft)
 ```
