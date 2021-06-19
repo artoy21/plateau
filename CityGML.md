@@ -34,6 +34,6 @@ with edit(layer):
 		ft['INUNDATION_MAX'] = inund_max
 		layer.updateFeature(ft)
 ```
-- 想定最大浸水深÷建物の高さで色分け
+- 想定最大浸水深÷建物の高さで色分け<br/>```"INUNDATION_MAX" / "measuredHeight" * 100```
 	- 緑（<1％）～赤（>30％）
 <img src="https://user-images.githubusercontent.com/34636490/122630113-8a909800-d0fc-11eb-84d1-b692ef25a313.png" width=600/>
