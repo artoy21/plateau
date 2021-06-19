@@ -1,4 +1,4 @@
-# Qgis2threejsによる可視化
+# Qgis2threejsによる3D表示
 - Qgis2threejsプラグインをインストール
 - Exporterを起動
   - Object type: ```Extruded```
